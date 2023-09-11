@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docs Editor</title>
+  <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body>
+  
+  <header class="header">
+    <h1 class="header__logo">DOCS Editor</h1>
+    <div class="header__actions">
+      <button id="copy-button" class="header__actions-copy">Copy to clipboard</button>
+    </div>
+  </header>
+
+
+  <main class="editor">
+    <section class="editor__editor">
+      <textarea placeholder="Type something here..." name="markdown" id="markdown" cols="80%" rows="80%"></textarea>
+    </section>
+    <section class="editor__screen">
+      <div className="instruction" id="markdown-output"></d>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
