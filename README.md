@@ -14,7 +14,7 @@ You can access the [Prototype Demo](https://ssenseii.github.io/simons-editor-pro
 
 This prototype works by parsing each line and changing it from markdown to HTML.
 
-It parses each line as a paragraph: <p> tag by default.
+It parses each line as a paragraph "<p>" tag by default.
 
 If you add one of the modifiers down below at the start of the line, it'll parse it as its according tag. 
 
