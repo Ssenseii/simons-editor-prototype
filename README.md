@@ -37,7 +37,6 @@ If you add one of the modifiers down below at the start of the line, it'll parse
 You can add your own modifiers by adding a few lines of code to the **script.ts** file and recompiling it.
 
 - Step 1: Add a new Enum for the tag you want to add, for example, **Header4**
-
 - Step 2: Create a class Visitor for the Tag you want:
 
 ```javascript
@@ -47,9 +46,7 @@ class Header4Visitor extends VisitorBase {
   }
 }
 ```
-
 - Step 3: Create a chain handler class for your tag with the appropriate HTML tag for it
-
 ```javascript 
 class Header1ChainHandler extends ParseChainHandler {
   constructor(document: IMarkdownDocument) {
@@ -57,17 +54,12 @@ class Header1ChainHandler extends ParseChainHandler {
   }
 }
 ```
-
 - Step 4: Create a tag modifier for the start of the line in the "tagTypeToHtml" class matching the Markdown equivalent or the HTML tag.
-
 ```javascript
 this.tagType.set(TagType.Header4, "h4");
 ```
-
 - Step 5: And that's it actually !!! you've done it and now you have your own working tag
-
 - Extra Step: I have my own react class hard set in the code for the tags you can change it by modifying this part of the code
-
 ```javascript 
 private GetTag(tagType: TagType, openingTagPattern: string) { 
     let tag = this.tagType.get(tagType); 
@@ -78,6 +70,7 @@ private GetTag(tagType: TagType, openingTagPattern: string) {
   }
 }
 ```
+
 #### Why not add all the html tags yourself?
 
 I would love to, but I have to manage my time accordingly. I only wanted to create a code mirror to easily add documentation to my website. 
@@ -86,7 +79,7 @@ I would love to, but I have to manage my time accordingly. I only wanted to crea
 
 A fun challenge to make one yourself, like creating your own game engine. I feel better about myself when I make something and use it.
 
-#### How to use?
+#### How to use it?
 
 - write your markdown in the green space
 - when finished, click "copy to clipboard"
